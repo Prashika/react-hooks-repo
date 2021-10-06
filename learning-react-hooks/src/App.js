@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 import FirstComponent from './components/first-component';
+import {
+  BrowserRouter as Router, 
+  Switch,
+  Route
+} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Welcome!
-        </p>
-        <FirstComponent />
-      </header>
-    </div>
+    <Router>
+      <Switch>
+          <Route path="/" exact component={FirstComponent} />
+      </Switch>
+    </Router>
   );
 }
 
